@@ -3,7 +3,7 @@
     <input v-model="bookData.bookTitle" type="text" name="title" value placeholder="Book Title" />
     <input v-model="bookData.bookAuthor" type="text" name="author" value placeholder="Book Author" />
     <div>
-      <label for="finishReading">
+      <label for="finishedReading">
         Finish Reading
         <input type="checkbox" v-model="bookData.finishReading" />
       </label>
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     bookSubmit(bookData) {
-      this.$emit("addBook", bookTitle, bookAuthor);
+      this.$emit("addBook", bookData);
     }
   }
 };
